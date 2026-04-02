@@ -185,7 +185,7 @@ def load_ceiling_panel_data(file_data: bytes) -> Tuple[List[Panel], List[Panel],
     Returns:
         (BODY 리스트, SIDE 리스트, HATCH 리스트, CUT_COST_BODY, CUT_COST_SIDE)
     """
-    xls = pd.ExcelFile(file_data)
+    xls = pd.ExcelFile(io.BytesIO(file_data))
 
     # 천장판 시트 로딩
     if "천장판" not in xls.sheet_names:

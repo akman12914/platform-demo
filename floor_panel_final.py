@@ -306,7 +306,7 @@ def load_pve_costs_from_excel(xls: pd.ExcelFile) -> Dict[str, Any]:
 @st.cache_data
 def load_floor_panel_data(file_data: bytes) -> Tuple[pd.DataFrame, Dict[str, Any], Optional[int]]:
     """바닥판 엑셀 로드 + 정규화 + PVE 비용정보 로드."""
-    xls = pd.ExcelFile(file_data)
+    xls = pd.ExcelFile(io.BytesIO(file_data))
 
     missing_sheets = [s for s in ["바닥판", "PVE"] if s not in xls.sheet_names]
     if missing_sheets:

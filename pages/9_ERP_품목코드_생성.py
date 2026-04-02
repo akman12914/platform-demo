@@ -1363,8 +1363,9 @@ if data_source == "엑셀 파일 업로드 (원가내역서)":
 
     if uploaded_file is not None:
         try:
+            _upload_bytes = uploaded_file.read()
             # 엑셀 파일의 시트 목록 확인
-            xl = pd.ExcelFile(uploaded_file)
+            xl = pd.ExcelFile(io.BytesIO(_upload_bytes))
             sheet_names = xl.sheet_names
 
             # 시트 선택
@@ -1378,7 +1379,7 @@ if data_source == "엑셀 파일 업로드 (원가내역서)":
                 selected_sheet = sheet_names[0]
 
             # 선택된 시트 읽기
-            df_upload = pd.read_excel(uploaded_file, sheet_name=selected_sheet)
+            df_upload = pd.read_excel(io.BytesIO(_upload_bytes), sheet_name=selected_sheet)
 
             # 컬럼명 정규화 (공백 제거)
             df_upload.columns = [str(col).strip() for col in df_upload.columns]

@@ -423,7 +423,7 @@ def load_tables_from_excel(file) -> tuple:
     250905_시스템욕실 설치비 내역서.xlsx 형식 파싱
     반환: (base_grp, base_ppe, adjust, area_rules, vehicles, oji_tbl, meals_std, detail_catalogs)
     """
-    xls = pd.ExcelFile(file)
+    xls = pd.ExcelFile(io.BytesIO(file.read()))
     sheet_names = xls.sheet_names
 
     # 250905 전용 포맷

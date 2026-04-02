@@ -640,7 +640,7 @@ def parse_wall_cost_excel(file_data: bytes) -> Tuple[Dict[str, Any], pd.DataFram
     - 타일수량단가, 출고+렉입고, 제조경비, 설비감가비, 총인건비, 조립클립단가
     - 타일벽체크기 하한 / 타일벽체생산량 → DAILY_PROD_TABLE
     """
-    xls = pd.ExcelFile(file_data)
+    xls = pd.ExcelFile(io.BytesIO(file_data))
     if "벽판" not in xls.sheet_names:
         raise ValueError("'벽판' 시트를 찾지 못했습니다.")
 
