@@ -3,6 +3,7 @@
 # 엑셀 파일 비교 및 버전 관리 모듈
 
 from __future__ import annotations
+import io
 import os
 import glob
 from datetime import datetime
@@ -192,8 +193,8 @@ def compare_excel_files(
     if target_sheets is None:
         target_sheets = ALL_SHEETS
 
-    old_xls = pd.ExcelFile(old_bytes)
-    new_xls = pd.ExcelFile(new_bytes)
+    old_xls = pd.ExcelFile(io.BytesIO(old_bytes))
+    new_xls = pd.ExcelFile(io.BytesIO(new_bytes))
 
     old_sheet_names = set(old_xls.sheet_names)
     new_sheet_names = set(new_xls.sheet_names)
