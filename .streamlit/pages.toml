@@ -1,0 +1,73 @@
+[[pages]]
+path = "메인.py"
+name = "메인"
+icon = "🏠"
+default = true
+in_nav = false
+is_hidden = true
+
+[[pages]]
+path = "pages/0_AI_시방서_분석.py"
+name = "AI 시방서 분석"
+icon = "💬"
+in_nav = true
+order = 1
+
+[[pages]]
+path = "pages/1_바닥판_계산.py"
+name = "바닥판 계산"
+icon = "🟦"
+in_nav = true
+order = 2
+
+[[pages]]
+path = "pages/2_벽판_계산_-_벽판_규격.py"
+name = "벽판 계산 - 벽판 규격"
+icon = "🟥"
+in_nav = true
+order = 3
+
+[[pages]]
+path = "pages/3_벽판_계산_-_타일_개수.py"
+name = "벽판 계산 - 타일 개수"
+icon = "🟧"
+in_nav = true
+order = 4
+
+[[pages]]
+path = "pages/로그인.py"
+name = "로그인"
+icon = "🔐"
+in_nav = true
+order = 5
+
+# 숨김 처리
+[[pages]]
+path = "pages/5_천장판_계산.py"
+name = "천장판 계산"
+icon = "🟩"
+is_hidden = true
+
+[[pages]]
+path = "pages/6_견적서_생성.py"
+name = "견적서 생성"
+icon = "🧾"
+is_hidden = true
+
+[[pages]]
+path = "pages/8_인건비_계산.py"
+name = "인건비 계산"
+icon = "💰"
+is_hidden = true
+
+[[pages]]
+path = "pages/9_ERP_품목코드_생성.py"
+name = "ERP 품목코드 생성"
+icon = "🔢"
+is_hidden = true
+
+[[pages]]
+path = "pages/관리자.py"
+name = "관리자"
+icon = "⚙️"
+is_hidden = true

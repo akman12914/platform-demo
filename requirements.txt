@@ -1,0 +1,36 @@
+# Core Framework
+streamlit>=1.32.0
+
+# Streamlit Extensions
+st-pages>=0.4.5
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# LangChain & AI
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
+langchain-core>=0.1.23
+langchain-text-splitters>=0.0.1
+openai>=1.12.0
+
+# Vector Store
+faiss-cpu>=1.7.4
+
+# PDF Processing
+pypdf>=4.0.0
+
+# Environment & Config
+python-dotenv>=1.0.0
+
+# Date & Time (Python 3.9+ built-in, but explicit for clarity)
+# zoneinfo is built-in for Python 3.9+, no need to install
+
+# Data Validation & Type Checking
+typing-extensions>=4.8.0

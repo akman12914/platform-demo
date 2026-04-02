@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(chcp 6500)",
+      "Bash(python -m py_compile:*)",
+      "Bash(chcp 65001)",
+      "Bash(python3 -m pip:*)",
+      "Bash(cat:*)",
+      "Bash(python3:*)",
+      "Bash(dir:*)",
+      "Bash(find:*)",
+      "Bash(findstr:*)",
+      "Bash(python -c \"\nimport pandas as pd\nimport openpyxl\n\n# Excel 파일의 시트명 확인\nfile_path = ''erp-docs/Sungil DB2_260105.xlsx''\nxls = pd.ExcelFile\\(file_path\\)\nprint\\(''시트명 목록:''\\)\nfor sheet in xls.sheet_names:\n    print\\(f''  - {sheet}''\\)\n\")",
+      "Bash(git -C \"c:\\\\Users\\\\rnldu\\\\code\\\\platform-sungil\" log --oneline -20)",
+      "Bash(Where-Object { $_Name -match '^\\\\.' })",
+      "Bash(xargs grep:*)",
+      "Bash(find /c/Users/rnldu/code/platform-sungil -type f \\\\\\(-name *.docx -o -name *.doc -o -name *.hwp -o -name *spec* \\\\\\))",
+      "Bash(wc -l /c/Users/rnldu/code/platform-sungil/*.py)",
+      "Bash(robocopy \"c:\\\\Users\\\\rnldu\\\\code\\\\platform-sungil\" \"c:\\\\Users\\\\rnldu\\\\code\\\\platform-demo\" /E /XD \"c:\\\\Users\\\\rnldu\\\\code\\\\platform-sungil\\\\.git\" \"c:\\\\Users\\\\rnldu\\\\code\\\\platform-sungil\\\\__pycache__\" /XF \"*.pyc\" /NFL /NDL /NJH /NJS)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
